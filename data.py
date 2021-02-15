@@ -1,5 +1,9 @@
 import requests
 from furl import furl
+import pandas as pd
+import os
+
+pwd = os.getcwd()
 
 regional_datasets = [US, Europe, Japan, emerg, China, India, Global]
 regional_datasets_topics = [inshold, beta, totalbeta, mktcaprisk]
@@ -15,3 +19,4 @@ for f in datasets_topics:
         response = response.content
     else:
         raise ValueError("Error Downloadning File")
+    
